@@ -1,78 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 body {
-    font-family: "Roboto", sans-serif;
-
+  font-family: "Roboto", sans-serif;
+  background: #EDF3FD;
 }
 
-nav ul {
+nav {
+  background: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid #aaaaaa;
+
+  ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    max-width: 1100px;
+    // padding: 15px;
+    max-width: 1400px;
     margin: auto;
+  }
 
-    .nav-links li {
-        list-style: none;
-        float: left;
-        font-family: 'Bebas Neue', sans-serif;
+  .nav-links li {
+    list-style: none;
+    float: left;
 
-        a {
-            padding: 5px 10px;
-            font-size: 18px;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-        }
-
+    a {
+      padding: 5px 20px;
+      font-size: 18px;
+      font-family: "Bebas Neue", sans-serif;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
     }
-    .donate-btn {
+  }
 
-        background-color: black;
-        color: white;
-        border-radius: 50px;
-        padding: 5px 10px;
-        text-decoration: none;
+  .donate-btn {
+    background-color: orangered;
+    min-height: 100%;
+    color: white;
+    text-decoration: none;
+    padding: 15px 24px;
+
+    a {
+      color: white !important;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
     }
+  }
 }
 
-
 header {
-    min-height: 100svh;
-    background-image: url("/assets/images/medium-shot-kids-sitting-outdoors.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  min-height: 100svh;
+  background-image: url("/assets/images/medium-shot-kids-sitting-outdoors.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 .hero-container {
-    position: absolute;
-    bottom: 120px;
-    margin-left: 14rem;
+  position: absolute;
+  bottom: 120px;
+  margin-left: 14rem;
 
-    .hero-content-wrapper h1 {
-        font-family: 'Bebas Neue', sans-serif;
-        line-height: 5rem;
-        font-size: 5rem;
-        color: white;
+  .hero-content-wrapper h1 {
+    font-family: "Bebas Neue", sans-serif;
+    line-height: 5rem;
+    font-size: 5rem;
+    color: white;
+  }
 
+  .cta-btns .button-global {
+    background-color: orangered;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+
+    .material-symbols-outlined {
+      font-size: 20px;
     }
-
-    .cta-btns .button-global {
-
-        background-color: orangered;
-        font-family: 'Bebas Neue', sans-serif;
-        color: white;
-        padding: 5px 20px;
-        text-decoration: none;
-        border-radius: 50px;
-        display: inline-flex;
-        align-items: center;
-
-        .material-symbols-outlined {
-            font-size: 20px;
-        }
-    }
+  }
 }
+
+//
+
+.page-align {
+  max-width: 1500px;
+  margin: auto;
+  margin-top: 80px;
+
+  .introduction h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+  }
+
+
+  .intro-card {
+    min-height: 400px;
+    background: white;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  }
+}
+
