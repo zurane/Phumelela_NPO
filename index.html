@@ -11,6 +11,14 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=switzer@100,101,200,201,300,301,400,401,500,501,600,601,701,800,801,900,901&f[]=gambarino@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=switzer@100,101,200,201,300,301,400,401,500,501,600,601,701,800,801,900,901&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -31,29 +39,35 @@
   <body>
     <!-- Header -->
     <header>
+      <div class="overlay" id="overlay">
+        <div class="loader" id="loader">
+          <img src="/assets/images/Dual Ring@1x-1.0s-200px-200px(1).png" />
+        </div>
+      </div>
       <nav>
         <ul>
-          <div class="logo">>>+</div>
+          <div class="logo"><img src="/assets/images/logo-version-2.svg"/></div>
           <div class="nav-links">
-            <!-- <li>
+            <li>
               <a href="#about">About</a>
             </li>
+            
             <li>
               <a href="#service">Services</a>
             </li>
             <li>
               <a href="#contact">Contact us</a>
-            </li> -->
+            </li>
           </div>
           <div class="donate-btn">
-            <a href="#contact">DONATE NOW</a>
+            <a href="#contact">DONATE </a>
           </div>
         </ul>
       </nav>
       <!-- Hero -->
       <div class="hero-container">
         <div class="hero-content-wrapper">
-          <h1>Transforming Lives,<br />Empowering Futures.</h1>
+          <h1>Changing Lives, Building <br/>Bright Futures.</h1>
           <div class="cta-btns">
             <a class="button-global" href=""
               >Get involved
@@ -64,29 +78,170 @@
       </div>
     </header>
     <!-- End of header -->
-    <div class="page-align">
+ 
       <section id="about">
         <div class="introduction">
-          <div class="row mb-4">
-            <div class="col">
+          <div class="row mb-5">
+            <div class="col mb-3">
               <h2>
                 Phumelela is a non-profit organization that aims to provide
                 educational resources, life skills, and recreational support to
                 underprivileged children with
               </h2>
             </div>
-            <div class="col">
+            <div class="row mt-3 mb-5">
+              <div class="col intro-card" id="intro-card">
+                <img src="/assets/images/african-kids-with-food.jpg" />
+                <div class="title-badge">
+                  <h4>Food Assistance</h4>
+                </div>
+                <div class="description">
+                  <p>
+                    Providing nutritious meals and food stamps to ensure
+                    children have access to proper nutrition and health
+                  </p>
+                </div>
+              </div>
+              <div class="col intro-card">
+                <img src="/assets/images/teaching-kids.jpg" />
+                <div class="title-badge">
+                  <h4>Educational Support</h4>
+                </div>
+                <div class="description">
+                  <p>
+                    Facilitating access to quality education, school supplies,
+                    and tutoring to enhance learning outcomes
+                  </p>
+                </div>
+              </div>
+              <div class="col intro-card">
+                <img src="/assets/images/working-together.jpg" />
+                <div class="title-badge"> <h4>Life Skills & Recreational</h4></div>
+                <div class="description">
+                  <p>
+                    Offering workshops and activities to develop essential life
+                    skills and promote physical and mental well-being
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="row mt-5 gap-3">
-              <div class="col intro-card"><h4>Food Assistance</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, provident.</p></div>
-              <div class="col intro-card"><h4>Educational Support</h4><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, rerum!</p></div>
-              <div class="col intro-card"><h4>Life Skills & Recreational</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, facilis.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mission-section">
+          <div class="align-center pt-5 pb-5">
+            <h3>What we stand for</h3>
+            <div class="row pt-4 pb-4 mt-5 mb-5 gap-4">
+              <div class="col card-small">
+                <div class="icon-text">
+                  <img src="/assets/images/mission-mountain.svg" width="50" />
+                </div>
+                <h4>Our Mission</h4>
+                <p>
+                  To empower disadvantaged children through comprehensive
+                  support, enabling them to reach their full potential.
+                </p>
+              </div>
+              <div class="col card-small">
+                <div class="icon-text">
+                  <img
+                    src="/assets/images/noun-vision-6913415.svg"
+                    width="50"
+                  />
+                </div>
+                <h4>Our Vision</h4>
+                <p>
+                  A society where all children have access to the resources and
+                  opportunities they need to thrive
+                </p>
+              </div>
+              <div class="col card-small">
+                <div class="icon-text">
+                  <img src="/assets/images/diamond-values.svg" width="50" />
+                </div>
+                <h4>Our Values</h4>
+                <p>Compassion, Empowerment, integrity and sustainability</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="volunteer-section">
+          <div class="volunteer-section-wrapper">
+            <h4>Funding & Donations</h4>
+            <div class="row mt-3 mb-5 gap-4">
+              <div class="m-0 box-1">
+                <img src="/assets/images/istockphoto-1436319269-612x612.jpg" />
+                <div class="col content-right">
+                  <h5>Volunteering<br/>Opportunities</h5>
+                  <p>
+                    Donate your time and skills to make a <br />difference in
+                    your community.
+                  </p>
+                  <form method="post" action="">
+                    <input type="text" placeholder="Enter your full names" /><br/>
+                    <input type="email" placeholder="Enter your email" />
+                    <br />
+                    <button type="submit">SIGN ME UP</button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-8 box-3">
+                <img src="/assets/images/working-together.jpg" />
+                <div class="content-bottom">
+                  <h5>Financial Donations</h5>
+                  <p>
+                    Support our mission through monetary <br/>donations to give to those in need.
+                  </p>
+                  <a href="#" class="box-btn"><span class="material-symbols-outlined">arrow_circle_right</span>Learn more</a>
+                </div>
+              </div>
+              <div class="col box-2">
+                <img
+                  src="/assets/images/hands-of-the-giving.jpg"
+                />
+                <div class="content-bottom">
+                  <div>
+                    <h5>In-kind Donations</h5>
+                    <p>
+                      Contribute essential supplies, food, or equipment to
+                      support those in need.
+                    </p>
+                  </div>
+                  <a href="#" class="box-btn">Donate now <span class="material-symbols-outlined">arrow_right_alt</span></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/main.js"></script>
   </body>
+  <footer class="footer">
+    <div class="footer-content-container">
+      <div class="footer-content">
+        <div class="row pt-5 d-flex align-center">
+          <div class="col">
+            <div class="site-logo">
+              <img src="/assets/images/footer-logo.svg" width="150">
+            </div>
+          </div>
+          <div class="col downloads">
+            <h6>Compliance</h6>
+            <ul>
+              <li><a href=""#>BBE Certificate</a></li>
+            </ul>
+          </div>
+          <div class="col"><h6>Subscribe</h6></div>
+          <div class="col"><h6>Subscribe</h6></div>
+        </div>
+      </div>
+  
+  </footer>
 </html>
