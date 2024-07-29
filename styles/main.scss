@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 html {
   padding: 0;
   margin: 0;
@@ -21,6 +22,7 @@ body {
 nav {
   padding: 15px 0px;
   border-bottom: 1px solid rgb(15, 15, 32);
+
   ul {
     display: flex;
     align-items: center;
@@ -47,6 +49,10 @@ nav {
       text-decoration: none;
       color: rgb(238, 238, 238);
     }
+
+    a:hover {
+      color: rgb(255, 87, 27);
+    }
   }
 
   .donate-btn {
@@ -71,20 +77,26 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative;
 }
 
 .hero-container {
-  position: absolute;
-  bottom: 100px;
-  left: 2%;
-  transform: translate(50%, -50%);
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex; /* Enables flexbox layout */
+  justify-content: left; /* Centers child elements horizontally */
+  align-items: center; /* Centers child elements vertically */
+  height: 100vh; /* Optional: sets the height of the container */
 
-  .hero-content-wrapper h1 {
-    font-family: "Bebas Neue", sans-serif;
-    line-height: 6rem;
-    font-size: 6rem;
-    color: white;
+  .hero-content-wrapper {
+    margin-left: 20px;
+    h1 {
+      font-family: "Bebas Neue", sans-serif;
+      line-height: 6rem;
+      font-size: 6.5rem;
+      color: white;
+    }
   }
 
   .cta-btns .button-global {
@@ -113,6 +125,7 @@ header {
 #about {
   padding-top: 80px;
 }
+
 .introduction {
   max-width: 1100px;
   margin: auto;
@@ -125,6 +138,7 @@ header {
 
 .intro-card {
   box-shadow: 0px 0px 15px -26px rgba(0, 0, 0, 0.1);
+  width: 100%;
   position: relative;
   overflow: hidden;
 
@@ -132,57 +146,58 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 0px 0px 5px 5px;
   }
 
   .title-badge {
     position: absolute;
     top: 12px;
     left: 20px;
-    background-color: rgb(239, 242, 255);
+    background-color: rgb(255, 255, 255);
     padding: 6px 5px 0px 5px;
     border-radius: 5px;
+
     h4 {
       font-weight: 600;
-      font-size: 9px;
+      font-size: 11px;
       color: #000000;
       text-transform: uppercase;
-      
     }
   }
+
   .description {
     padding: 0px 10px;
     position: absolute;
-    border-radius: 10px 10px 0px 0px;
     bottom: 0;
     background-color: white;
     width: 100%;
     height: 0;
     transition: 0.5s ease;
+
     p {
       font-family: Helvetica, sans-serif;
-      font-size: 13px;
+      font-size: 16px;
       color: rgb(0, 0, 0);
     }
   }
 }
 
-
 .intro-card:hover {
   .description {
-    height: 20%;
+    height: 30%;
+    padding: 20px 10px;
   }
 }
-
-
 
 .mission-section {
   background-color: rgb(224, 236, 255);
 }
+
 .align-center {
   max-width: 1100px;
   margin: auto;
   padding: 15px 0px;
+
   .icon-text {
     display: inline-flex;
     align-items: center;
@@ -193,6 +208,7 @@ header {
     font-family: "Bebas Neue", sans-serif;
     font-size: 40px;
   }
+
   h4 {
     font-size: 18px;
     font-weight: 600;
@@ -219,30 +235,40 @@ header {
 }
 
 .volunteer-section {
+  background-color: #050216;
+
   .volunteer-section-wrapper {
     max-width: 1100px;
     margin: auto;
     justify-content: center;
     padding: 3rem 0;
+
     h4 {
       font-family: "Bebas Neue", sans-serif;
-      font-size: 30px;
+      font-size: 45px;
+      color: #ffffff;
     }
   }
 }
 
 // boxes
 .box-1 {
-  border-radius: 10px;
-  box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.1);
-  background-color: #f5f3ff;
+  background-color: #271eac;
+  /* From https://css.glass */
+  background: rgb(241, 241, 245);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(235, 235, 235, 0.075);
+  // backdrop-filter: blur(5px);
+  // -webkit-backdrop-filter: blur(5px);
   padding: 0 !important;
+  border-radius: 0px 5px 5px 0px;
   overflow: hidden;
   display: flex;
   gap: 30px;
 
   .img-left {
     width: 100%;
+
     img {
       border-radius: 15px 0px 0px 15px;
     }
@@ -256,7 +282,9 @@ header {
       text-transform: capitalize;
       font-size: 25px;
       font-weight: 600;
+      color: #000000;
     }
+
     p {
       font-size: 15px;
     }
@@ -264,21 +292,46 @@ header {
     button {
       border: none;
       background-color: transparent;
+      position: relative;
+      font-size: 13px;
       color: rgb(0, 0, 0);
-      font-family: "Bebas Neue", sans-serif;
+      font-family: Helvetica, sans-serif;
+      font-weight: 600;
       padding-bottom: 1px;
-      border-bottom: 1px solid #000000;
       margin-top: 5px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    button::after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: #0f0f0f;
+      transition: 0.2s ease;
+    }
+
+    button:hover::after {
+      width: 100%;
     }
 
     input {
       background-color: transparent;
-      border: 1px solid #000;
-      width: 250px;
-      border-radius: 5px;
+      border: none;
+      border-bottom: 1px solid #000;
+      width: 290px;
       font-size: 12px;
-      padding: 10px 13px;
+      padding: 14px 9px;
       margin-bottom: 10px;
+    }
+
+    input:focus {
+      outline: none;
+      border: 1px solid #000;
+      border-radius: 5px;
     }
   }
 }
@@ -286,53 +339,75 @@ header {
 .box-2 {
   display: block;
   padding: 0 !important;
-  background-color: #fff1ee;
-  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.1);
 
   img {
     width: 100%;
+    border-radius: 5px 5px 0px 0px;
   }
 
   .content-bottom {
-    padding: 15px 20px 0px 20px;
+    padding: 15px 0px 0px 0px;
+
     h5 {
       font-family: Helvetica, sans-serif !important;
       text-transform: capitalize;
       font-size: 25px;
       font-weight: 600;
+      color: #ffffff;
     }
 
     p {
       font-size: 15px;
+      color: #ffffff;
     }
 
     .box-btn {
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      position: relative;
+      color: white;
+      position: relative;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      border-radius: 50px;
-      background: #000000;
-      font-size: 14px;
-      padding: 3px 15px 2px 15px;
-      color: #ffffff;
-      font-size: 14px;
+      padding-bottom: 1px;
 
       .material-symbols-outlined {
-        font-weight: 150;
-        font-size: 30px;
+        font-weight: 100;
+        font-size: 25px;
       }
+    }
+
+    .box-btn::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: #ffffff;
+      transition: 0.2s ease;
+    }
+
+    .box-btn:hover::after {
+      width: 100%;
+    }
+
+    button {
+      background: none;
+      border: none;
     }
   }
 }
+
 .box-3 {
   display: flex;
   gap: 25px;
   padding: 0 !important;
-  background-color: #eef7fd;
-  box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  background-color: #fffbf4;
+  box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.034);
   overflow: hidden;
 
   img {
@@ -356,37 +431,332 @@ header {
     }
 
     .box-btn {
-      display: inline-flex;
-      align-items: center;
+      color: rgb(0, 0, 0);
+      font-family: Helvetica, sans-serif;
+      padding-bottom: 1px;
+      font-size: 12px;
       text-decoration: none;
-      color: #000000;
-      background: #85ffb8;
-      font-size: 14px;
-      padding: 3px 10px 2px 5px;
-      border-radius: 50px;
-      // font-family: "Bebas Neue", sans-serif;
 
       .material-symbols-outlined {
         font-weight: 150;
         font-size: 30px;
       }
     }
+
+    .box-btn:hover {
+      border-bottom: 1px solid #000000;
+    }
   }
 }
 
-.footer {
-  min-height: 300px;
-  background-color: #f7f7f7;
-  .footer-content-container {
+.teams-section {
+  background-color: #eff1ff;
+  border-radius: 20px 20px 0px 0px;
+
+  h2 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #050216;
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .teams-section-wrapper {
     max-width: 1100px;
     margin: auto;
+  }
 
-    .downloads {
-      ul li {
-        list-style: none;
+  .profile-img-wrapper {
+    text-align: center;
+    img {
+      width: 65%;
+      border-radius: 50%;
+    }
+
+    padding-bottom: 12px;
+  }
+
+  .profile-details {
+    line-height: 9px;
+    margin-top: 10px;
+  }
+
+  h5,
+  span {
+    color: #050216;
+  }
+
+  h5 {
+    font-weight: 600;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+// .newsletter-container {
+//   background-color: #ffcb05;
+// }
+
+.footer {
+  min-height: 320px;
+  padding-top: 30px;
+}
+
+.newsletter-container {
+  background-color: #f6f6f7;
+  .subscription-form {
+    max-width: 1100px;
+    margin: auto;
+    h1 {
+      font-size: 40px;
+      font-weight: 600;
+    }
+    label {
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-bottom: 12px;
+    }
+
+    input:focus {
+      outline: none;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input,
+    textarea {
+      width: 500px;
+      padding: 15px 5px;
+      margin-top: 5px;
+      background-color: #f6f6f7;
+      border: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    textarea {
+      width: 500px;
+      resize: none;
+      border: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    textarea:focus {
+      outline: none;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      border: none;
+      background-color: transparent;
+      position: relative;
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+      font-family: Helvetica, sans-serif;
+      font-weight: 600;
+      padding-bottom: 1px;
+      margin-top: 5px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    button::after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: #0f0f0f;
+      transition: 0.2s ease;
+    }
+
+    button:hover::after {
+      width: 100%;
+    }
+  }
+}
+.footer-content-container {
+  max-width: 1100px;
+  margin: auto;
+
+  .downloads h6 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #000000;
+  }
+
+  .footer-links a:hover {
+    color: orangered;
+  }
+
+  .footer-links p {
+    font-size: 13px;
+  }
+  .download-links {
+    // background-color: #f8f8f8;
+    padding: 5px 0px;
+    border-radius: 4px;
+  }
+  .download-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+    border-radius: 2px 2px 0px 0px;
+    width: 100%;
+    margin-bottom: 6px;
+
+    .material-symbols-outlined {
+      font-weight: 100;
+      font-size: 24px;
+    }
+  }
+
+  .download-link:first-child {
+    border-bottom: 1px solid #e6e5e5;
+    padding-bottom: 10px;
+  }
+
+  .download-link:hover {
+    color: orangered;
+  }
+}
+
+footer .align {
+  max-width: 1100px;
+  margin: auto;
+  border-top: 1px solid #ccc;
+
+  .footer-bottom-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+    .copyright-links p {
+      font-size: 10px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+
+    .social-media-links ul li {
+      float: left;
+      list-style: none;
+      padding: 0px 10px;
+
+      a {
+        text-decoration: none;
+        color: #010312;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      a:hover {
+        color: orangered;
       }
     }
   }
+}
+
+.models {
+  background: red;
+  height: 100px;
+  width: 300px;
+}
+
+// Loader
+
+/* Modal overlay styles */
+.modals-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 99; /* Ensures the modal appears above other content */
+}
+
+/* Show modal when active */
+.modals-overlay.active {
+  display: flex;
+}
+
+.modals.in-active {
+  display: none;
+}
+
+.modal-active {
+  display: block;
+}
+
+/* Modal container styles */
+.modals {
+  background: #f1f0f0;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px; /* Max width to limit modal size */
+  margin: 0 auto;
+  position: absolute;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  // Center the pop up
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
+}
+
+.modals-wrapper {
+
+  position: relative;
+}
+
+
+/* Modal content styles */
+.modals-content {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  gap: 20px;
+}
+
+/* Left and right section styles */
+.modals-content .left,
+.modals-content .right {
+  flex: 1; /* Equal width for both sections */
+}
+
+.modals-content .left {
+  border-radius: 8px;
+  img {
+    width: 100%;
+  }
+}
+
+.modals-content .right {
+  border-radius: 8px;
+  margin: auto;
+}
+
+/* Close button styles */
+#closeModalBtn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 5px;
 }
 
 // Loader
@@ -415,6 +785,7 @@ header {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
