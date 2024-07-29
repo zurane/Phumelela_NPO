@@ -1,61 +1,98 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-body {
-  font-family: "Roboto", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Helvetica, sans-serif !important;
+  background: #fff3f3;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+nav {
+  padding: 15px 0px;
+  border-bottom: 1px solid rgb(15, 15, 32);
+}
 nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
   max-width: 1100px;
   margin: auto;
 }
-nav ul .nav-links li {
+nav ul .logo img {
+  width: 140px;
+}
+nav .nav-links li {
   list-style: none;
   float: left;
-  font-family: "Bebas Neue", sans-serif;
 }
-nav ul .nav-links li a {
-  padding: 5px 10px;
-  font-size: 18px;
-  text-transform: uppercase;
+nav .nav-links li a {
+  padding: 5px 25px;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: Helvetica, sans-serif !important;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(238, 238, 238);
 }
-nav ul .donate-btn {
-  background-color: black;
-  color: white;
+nav .nav-links li a:hover {
+  color: rgb(255, 87, 27);
+}
+nav .donate-btn {
+  min-height: 100%;
+  text-decoration: none;
+  padding: 5px 15px;
   border-radius: 50px;
-  padding: 5px 10px;
+  background-color: #ffffff;
+}
+nav .donate-btn a {
+  color: rgb(8, 8, 8) !important;
   text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 header {
   min-height: 100svh;
-  background-image: url("/assets/images/medium-shot-kids-sitting-outdoors.jpg");
+  background-color: #010312;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative;
 }
 
 .hero-container {
-  position: absolute;
-  bottom: 120px;
-  margin-left: 14rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex; /* Enables flexbox layout */
+  justify-content: left; /* Centers child elements horizontally */
+  align-items: center; /* Centers child elements vertically */
+  height: 100vh; /* Optional: sets the height of the container */
+}
+.hero-container .hero-content-wrapper {
+  margin-left: 20px;
 }
 .hero-container .hero-content-wrapper h1 {
   font-family: "Bebas Neue", sans-serif;
-  line-height: 5rem;
-  font-size: 5rem;
+  line-height: 6rem;
+  font-size: 6.5rem;
   color: white;
 }
 .hero-container .cta-btns .button-global {
-  background-color: orangered;
+  background-color: #ff452c;
   font-family: "Bebas Neue", sans-serif;
   color: white;
-  padding: 5px 20px;
+  padding: 10px 25px;
   text-decoration: none;
   border-radius: 50px;
   display: inline-flex;
@@ -63,4 +100,601 @@ header {
 }
 .hero-container .cta-btns .button-global .material-symbols-outlined {
   font-size: 20px;
+}
+
+#about {
+  padding-top: 80px;
+}
+
+.introduction {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.introduction h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 35px;
+}
+
+.intro-card {
+  box-shadow: 0px 0px 15px -26px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.intro-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px 0px 5px 5px;
+}
+.intro-card .title-badge {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 6px 5px 0px 5px;
+  border-radius: 5px;
+}
+.intro-card .title-badge h4 {
+  font-weight: 600;
+  font-size: 11px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.intro-card .description {
+  padding: 0px 10px;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+.intro-card .description p {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+}
+
+.intro-card:hover .description {
+  height: 30%;
+  padding: 20px 10px;
+}
+
+.mission-section {
+  background-color: rgb(224, 236, 255);
+}
+
+.align-center {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 0px;
+}
+.align-center .icon-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.align-center h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+}
+.align-center h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.align-center .card-small {
+  border-bottom: 2px solid #666666;
+  padding: 20px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  min-height: 250px;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0px 3px 15px -26px rgba(231, 231, 231, 0.185);
+}
+.align-center .card-small p {
+  font-size: 15px;
+  font-family: Helvetica, sans-serif;
+}
+
+.volunteer-section {
+  background-color: #050216;
+}
+.volunteer-section .volunteer-section-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.volunteer-section .volunteer-section-wrapper h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 45px;
+  color: #ffffff;
+}
+
+.box-1 {
+  background-color: #271eac;
+  /* From https://css.glass */
+  background: rgb(241, 241, 245);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(235, 235, 235, 0.075);
+  padding: 0 !important;
+  border-radius: 0px 5px 5px 0px;
+  overflow: hidden;
+  display: flex;
+  gap: 30px;
+}
+.box-1 .img-left {
+  width: 100%;
+}
+.box-1 .img-left img {
+  border-radius: 15px 0px 0px 15px;
+}
+.box-1 .content-right {
+  margin: auto;
+}
+.box-1 .content-right h5 {
+  font-family: Helvetica, sans-serif !important;
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: 600;
+  color: #000000;
+}
+.box-1 .content-right p {
+  font-size: 15px;
+}
+.box-1 .content-right button {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+  padding-bottom: 1px;
+  margin-top: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+.box-1 .content-right button::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #0f0f0f;
+  transition: 0.2s ease;
+}
+.box-1 .content-right button:hover::after {
+  width: 100%;
+}
+.box-1 .content-right input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 290px;
+  font-size: 12px;
+  padding: 14px 9px;
+  margin-bottom: 10px;
+}
+.box-1 .content-right input:focus {
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.box-2 {
+  display: block;
+  padding: 0 !important;
+  overflow: hidden;
+}
+.box-2 img {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+.box-2 .content-bottom {
+  padding: 15px 0px 0px 0px;
+}
+.box-2 .content-bottom h5 {
+  font-family: Helvetica, sans-serif !important;
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.box-2 .content-bottom p {
+  font-size: 15px;
+  color: #ffffff;
+}
+.box-2 .content-bottom .box-btn {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 1px;
+}
+.box-2 .content-bottom .box-btn .material-symbols-outlined {
+  font-weight: 100;
+  font-size: 25px;
+}
+.box-2 .content-bottom .box-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+.box-2 .content-bottom .box-btn:hover::after {
+  width: 100%;
+}
+.box-2 .content-bottom button {
+  background: none;
+  border: none;
+}
+
+.box-3 {
+  display: flex;
+  gap: 25px;
+  padding: 0 !important;
+  background-color: #fffbf4;
+  box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.034);
+  overflow: hidden;
+}
+.box-3 img {
+  width: 100%;
+}
+.box-3 .content-bottom {
+  padding: 15px 15px 0px 10px;
+  width: 100%;
+  margin: auto;
+}
+.box-3 .content-bottom h5 {
+  font-family: Helvetica, sans-serif !important;
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: 600;
+}
+.box-3 .content-bottom p {
+  font-size: 15px;
+}
+.box-3 .content-bottom .box-btn {
+  color: rgb(0, 0, 0);
+  font-family: Helvetica, sans-serif;
+  padding-bottom: 1px;
+  font-size: 12px;
+  text-decoration: none;
+}
+.box-3 .content-bottom .box-btn .material-symbols-outlined {
+  font-weight: 150;
+  font-size: 30px;
+}
+.box-3 .content-bottom .box-btn:hover {
+  border-bottom: 1px solid #000000;
+}
+
+.teams-section {
+  background-color: #eff1ff;
+  border-radius: 20px 20px 0px 0px;
+}
+.teams-section h2 {
+  font-family: "Bebas Neue", sans-serif;
+  color: #050216;
+  font-size: 38px;
+  text-align: center;
+}
+.teams-section .teams-section-wrapper {
+  max-width: 1100px;
+  margin: auto;
+}
+.teams-section .profile-img-wrapper {
+  text-align: center;
+  padding-bottom: 12px;
+}
+.teams-section .profile-img-wrapper img {
+  width: 65%;
+  border-radius: 50%;
+}
+.teams-section .profile-details {
+  line-height: 9px;
+  margin-top: 10px;
+}
+.teams-section h5,
+.teams-section span {
+  color: #050216;
+}
+.teams-section h5 {
+  font-weight: 600;
+}
+.teams-section span {
+  font-size: 14px;
+}
+
+.footer {
+  min-height: 320px;
+  padding-top: 30px;
+}
+
+.newsletter-container {
+  background-color: #f6f6f7;
+}
+.newsletter-container .subscription-form {
+  max-width: 1100px;
+  margin: auto;
+}
+.newsletter-container .subscription-form h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.newsletter-container .subscription-form label {
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+.newsletter-container .subscription-form input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.newsletter-container .subscription-form input,
+.newsletter-container .subscription-form textarea {
+  width: 500px;
+  padding: 15px 5px;
+  margin-top: 5px;
+  background-color: #f6f6f7;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.newsletter-container .subscription-form textarea {
+  width: 500px;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.newsletter-container .subscription-form textarea:focus {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.newsletter-container .subscription-form button {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+  padding-bottom: 1px;
+  margin-top: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+.newsletter-container .subscription-form button::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #0f0f0f;
+  transition: 0.2s ease;
+}
+.newsletter-container .subscription-form button:hover::after {
+  width: 100%;
+}
+
+.footer-content-container {
+  max-width: 1100px;
+  margin: auto;
+}
+.footer-content-container .downloads h6 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.footer-content-container .footer-links a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #000000;
+}
+.footer-content-container .footer-links a:hover {
+  color: orangered;
+}
+.footer-content-container .footer-links p {
+  font-size: 13px;
+}
+.footer-content-container .download-links {
+  padding: 5px 0px;
+  border-radius: 4px;
+}
+.footer-content-container .download-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  border-radius: 2px 2px 0px 0px;
+  width: 100%;
+  margin-bottom: 6px;
+}
+.footer-content-container .download-link .material-symbols-outlined {
+  font-weight: 100;
+  font-size: 24px;
+}
+.footer-content-container .download-link:first-child {
+  border-bottom: 1px solid #e6e5e5;
+  padding-bottom: 10px;
+}
+.footer-content-container .download-link:hover {
+  color: orangered;
+}
+
+footer .align {
+  max-width: 1100px;
+  margin: auto;
+  border-top: 1px solid #ccc;
+}
+footer .align .footer-bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+footer .align .footer-bottom-content .copyright-links p {
+  font-size: 10px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+footer .align .footer-bottom-content .social-media-links ul li {
+  float: left;
+  list-style: none;
+  padding: 0px 10px;
+}
+footer .align .footer-bottom-content .social-media-links ul li a {
+  text-decoration: none;
+  color: #010312;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+footer .align .footer-bottom-content .social-media-links ul li a:hover {
+  color: orangered;
+}
+
+.models {
+  background: red;
+  height: 100px;
+  width: 300px;
+}
+
+/* Modal overlay styles */
+.modals-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 99; /* Ensures the modal appears above other content */
+}
+
+/* Show modal when active */
+.modals-overlay.active {
+  display: flex;
+}
+
+.modals.in-active {
+  display: none;
+}
+
+.modal-active {
+  display: block;
+}
+
+/* Modal container styles */
+.modals {
+  background: #f1f0f0;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px; /* Max width to limit modal size */
+  margin: 0 auto;
+  position: absolute;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
+}
+
+.modals-wrapper {
+  position: relative;
+}
+
+/* Modal content styles */
+.modals-content {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  gap: 20px;
+}
+
+/* Left and right section styles */
+.modals-content .left,
+.modals-content .right {
+  flex: 1; /* Equal width for both sections */
+}
+
+.modals-content .left {
+  border-radius: 8px;
+}
+.modals-content .left img {
+  width: 100%;
+}
+
+.modals-content .right {
+  border-radius: 8px;
+  margin: auto;
+}
+
+/* Close button styles */
+#closeModalBtn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(240, 240, 240);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  animation: spin 1s linear infinite;
+  left: 50%;
+  right: 50%;
+  z-index: 99;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loaded .overlay {
+  display: none;
+}
+
+.loaded .loader {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
