@@ -20,8 +20,7 @@ body {
 }
 
 nav {
-  padding: 15px 0px;
-  border-bottom: 1px solid rgb(15, 15, 32);
+  padding: 25px 0px;
 
   ul {
     display: flex;
@@ -32,7 +31,7 @@ nav {
     margin: auto;
 
     .logo img {
-      width: 140px;
+      width: 150px;
     }
   }
 
@@ -58,8 +57,7 @@ nav {
   .donate-btn {
     min-height: 100%;
     text-decoration: none;
-    padding: 5px 15px;
-    border-radius: 50px;
+    padding: 10px 25px;
     background-color: #ffffff;
 
     a {
@@ -72,18 +70,18 @@ nav {
 }
 
 header {
-  min-height: 100svh;
+  height: 90vh;
   background-color: #010312;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center left;
+  background-image: url("../assets/images/phumelela.jpg");
   position: relative;
 }
 
 .hero-container {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: flex; /* Enables flexbox layout */
   justify-content: left; /* Centers child elements horizontally */
   align-items: center; /* Centers child elements vertically */
@@ -93,8 +91,8 @@ header {
     margin-left: 20px;
     h1 {
       font-family: "Bebas Neue", sans-serif;
-      line-height: 6rem;
-      font-size: 6.5rem;
+      line-height: 5rem;
+      font-size: 5.5rem;
       color: white;
     }
   }
@@ -102,15 +100,16 @@ header {
   .cta-btns .button-global {
     background-color: #ff452c;
     font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
     color: white;
     padding: 10px 25px;
     text-decoration: none;
-    border-radius: 50px;
     display: inline-flex;
     align-items: center;
+    justify-content:space-between;
 
     .material-symbols-outlined {
-      font-size: 20px;
+      font-size: 36px;
     }
   }
 }
