@@ -9,7 +9,6 @@ html {
 }
 
 body {
-  // font-family: "Roboto", sans-serif !important;
   font-family: Helvetica, sans-serif !important;
   background: #fff3f3;
 }
@@ -59,6 +58,7 @@ nav {
     text-decoration: none;
     padding: 10px 25px;
     background-color: #ffffff;
+    border-radius: 5px;
 
     a {
       color: rgb(8, 8, 8) !important;
@@ -92,7 +92,7 @@ header {
     h1 {
       font-family: "Bebas Neue", sans-serif;
       line-height: 5rem;
-      font-size: 5.5rem;
+      font-size: 4.5rem;
       color: white;
     }
   }
@@ -103,10 +103,11 @@ header {
     font-size: 20px;
     color: white;
     padding: 10px 25px;
+    border-radius: 5px;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
 
     .material-symbols-outlined {
       font-size: 36px;
@@ -206,6 +207,7 @@ header {
   h3 {
     font-family: "Bebas Neue", sans-serif;
     font-size: 40px;
+    text-align: center;
   }
 
   h4 {
@@ -234,27 +236,34 @@ header {
 }
 
 .volunteer-section {
-  background-color: #050216;
+  background-color: #f6f6f7;
+  
 
   .volunteer-section-wrapper {
     max-width: 1100px;
     margin: auto;
     justify-content: center;
     padding: 3rem 0;
+    border-bottom: 2px solid #e4e4e4;
 
     h4 {
       font-family: "Bebas Neue", sans-serif;
       font-size: 45px;
-      color: #ffffff;
+      color: #000000;
     }
   }
+}
+
+.parent-box {
+  background-color: white;
+  box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.034);
 }
 
 // boxes
 .box-1 {
   background-color: #271eac;
   /* From https://css.glass */
-  background: rgb(241, 241, 245);
+  background: rgb(255, 255, 255);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(235, 235, 235, 0.075);
   // backdrop-filter: blur(5px);
@@ -346,36 +355,38 @@ header {
   }
 
   .content-bottom {
-    padding: 15px 0px 0px 0px;
+    padding: 25px 15px;
 
     h5 {
       font-family: Helvetica, sans-serif !important;
       text-transform: capitalize;
       font-size: 25px;
       font-weight: 600;
-      color: #ffffff;
+      color: #000000;
     }
 
     p {
       font-size: 15px;
-      color: #ffffff;
+      color: #000000;
     }
 
     .box-btn {
       font-size: 13px;
       font-weight: bold;
       text-transform: uppercase;
+      border: 1px solid black;
+      border-radius: 5px;
       position: relative;
-      color: white;
+      color: rgb(0, 0, 0);
       position: relative;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      padding-bottom: 1px;
+      padding: 10px;
 
       .material-symbols-outlined {
         font-weight: 100;
-        font-size: 25px;
+        font-size: 22px;
       }
     }
 
@@ -385,8 +396,8 @@ header {
       left: 0;
       bottom: 0;
       width: 0;
-      height: 1px;
-      background: #ffffff;
+      height: 3px;
+      background: #000000;
       transition: 0.2s ease;
     }
 
@@ -716,10 +727,8 @@ footer .align {
 }
 
 .modals-wrapper {
-
   position: relative;
 }
-
 
 /* Modal content styles */
 .modals-content {
