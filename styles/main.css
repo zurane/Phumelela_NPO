@@ -698,4 +698,40 @@ footer .align .footer-bottom-content .social-media-links ul li a:hover {
 
 .loaded .loader {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .intro-card h4 {
+    font-size: 25px;
+    margin-top: 13px;
+  }
+  .intro-card p {
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000000;
+  }
+  .mission-section .card-small {
+    border-left: 3px solid #666666;
+    border-bottom: none;
+    border-radius: 0px 15px 0px 0px;
+  }
+  .mission-section .card-small img {
+    width: 60px !important;
+  }
+  .mission-section .card-small h4 {
+    font-size: 25px;
+  }
+  .mission-section .card-small p {
+    font-size: 20px;
+  }
+  .parent-box .box-2 .content-bottom h5 {
+    font-size: 25px;
+  }
+  .parent-box .box-2 .content-bottom p {
+    font-size: 20px;
+  }
+  .parent-box .box-2 .content-bottom .box-btn {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=main.css.map */
