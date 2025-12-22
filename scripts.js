@@ -40,3 +40,10 @@ window.addEventListener('click', (event) => {
 });
 
 
+// Add script to update the year in the footer
+document.addEventListener("DOMContentLoaded", function () {
+  const yearSpan = document.getElementById("year");
+  const currentYear = new Date().getFullYear();
+  console.log(currentYear);
+  yearSpan.textContent = currentYear;
+});
