@@ -74,7 +74,7 @@ header {
   background-color: #010312;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center left;
+  background-position: center;
   background-image: url("../assets/images/phumelela.jpg");
   position: relative;
 }
@@ -792,6 +792,29 @@ footer .align {
 // ============= Responsive Styles ============= //
 
 @media (max-width: 768px) {
+  .hero-container {
+    .hero-content-wrapper {
+      h1 {
+        font-size: 50px;
+        line-height: 3rem;
+      }
+    }
+  }
+  nav {
+    padding: 20px 5px;
+    ul {
+      padding: 15px;
+    }
+    .nav-links {
+      display: none;
+    }
+  }
+
+  .introduction h2 {
+    font-size: 28px;
+    font-family: Helvetica, sans-serif !important;
+  }
+
   .intro-card {
     h4 {
       font-size: 25px;

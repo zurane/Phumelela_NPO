@@ -47,3 +47,17 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log(currentYear);
   yearSpan.textContent = currentYear;
 });
+
+// Responsive navbar toggle
+const navbarToggle = document.getElementById('navbarToggle');
+const navbarMenu = document.getElementById('navbarMenu');
+navbarToggle.addEventListener('click', () => {
+  navbarMenu.classList.toggle('active');
+});
+// Close navbar menu when a link is clicked (for better UX on mobile)
+const navbarLinks = navbarMenu.querySelectorAll('a');
+navbarLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navbarMenu.classList.remove('active');
+  });
+});
